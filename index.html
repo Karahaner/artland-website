@@ -12,8 +12,8 @@
     }
     body, html {
       height: 100%;
+      overflow: hidden;
       font-family: sans-serif;
-      scroll-behavior: smooth;
       color: white;
     }
     #bg-video {
@@ -40,8 +40,9 @@
       align-items: center;
       padding: 1rem 2rem;
       background: rgba(0,0,0,0.3);
-      position: sticky;
+      position: absolute;
       top: 0;
+      width: 100%;
     }
     nav .logo img {
       height: 40px;
@@ -52,17 +53,35 @@
       color: white;
       font-weight: bold;
       transition: opacity 0.3s;
+      cursor: pointer;
     }
     nav a:hover {
       opacity: 0.6;
     }
-    section {
-      padding: 5rem 2rem;
-      background: rgba(0, 0, 0, 0.85);
+    .modal {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0, 0, 0, 0.95);
+      padding: 2rem;
+      max-width: 90%;
+      max-height: 80%;
+      overflow-y: auto;
+      z-index: 10;
+      border-radius: 8px;
     }
-    h2 {
+    .modal h2 {
       font-size: 2rem;
       margin-bottom: 1rem;
+    }
+    .modal .close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-size: 1.5rem;
+      cursor: pointer;
     }
   </style>
 </head>
@@ -77,18 +96,20 @@
       <img src="logo.png" alt="Artland Logo" />
     </a>
     <div>
-      <a href="#about">About</a>
-      <a href="#services">What We Do</a>
-      <a href="#contact">Contact</a>
+      <a onclick="openModal('about')">About</a>
+      <a onclick="openModal('services')">What We Do</a>
+      <a onclick="openModal('contact')">Contact</a>
     </div>
   </nav>
 
-  <section id="about">
+  <div id="about" class="modal">
+    <span class="close" onclick="closeModal('about')">&times;</span>
     <h2>About</h2>
     <p>We merge culture, technology and emotion to create experiences that matter.</p>
-  </section>
+  </div>
 
-  <section id="services">
+  <div id="services" class="modal">
+    <span class="close" onclick="closeModal('services')">&times;</span>
     <h2>What We Do</h2>
     <ul>
       <li>Brand Strategy</li>
@@ -97,11 +118,21 @@
       <li>AI Video Production</li>
       <li>Film Production</li>
     </ul>
-  </section>
+  </div>
 
-  <section id="contact">
+  <div id="contact" class="modal">
+    <span class="close" onclick="closeModal('contact')">&times;</span>
     <h2>Contact</h2>
     <p>Email us at: <a href="mailto:hello@artlandtr.com" style="color: #ff6c50; text-decoration: none;">hello@artlandtr.com</a></p>
-  </section>
+  </div>
+
+  <script>
+    function openModal(id) {
+      document.getElementById(id).style.display = 'block';
+    }
+    function closeModal(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+  </script>
 </body>
 </html>
