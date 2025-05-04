@@ -36,11 +36,15 @@
     }
     nav {
       display: flex;
-      justify-content: flex-end;
+      justify-content: space-between;
+      align-items: center;
       padding: 1rem 2rem;
       background: rgba(0,0,0,0.3);
       position: sticky;
       top: 0;
+    }
+    nav .logo img {
+      height: 40px;
     }
     nav a {
       margin-left: 2rem;
@@ -51,21 +55,6 @@
     }
     nav a:hover {
       opacity: 0.6;
-    }
-    .hero {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-    .hero h1 {
-      font-size: 3rem;
-    }
-    .hero p {
-      margin-top: 1rem;
-      font-size: 1.2rem;
     }
     section {
       padding: 5rem 2rem;
@@ -84,17 +73,15 @@
   <div id="overlay"></div>
 
   <nav>
-    <a href="#about">About</a>
-    <a href="#services">What We Do</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <div class="hero">
-    <a href="#" style="text-decoration: none; color: white;">
-      <h1>Artland Creative</h1>
+    <a href="#" class="logo">
+      <img src="logo.png" alt="Artland Logo" />
     </a>
-    <p>Beyond visible. <span style="color: #ff6c50">Into memory.</span></p>
-  </div>
+    <div>
+      <a href="#about">About</a>
+      <a href="#services">What We Do</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
 
   <section id="about">
     <h2>About</h2>
