@@ -23,6 +23,15 @@
       width: 100vw;
       height: 100vh;
       object-fit: cover;
+      z-index: -2;
+    }
+    #overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.6);
       z-index: -1;
     }
     nav {
@@ -70,8 +79,9 @@
 </head>
 <body>
   <video autoplay muted loop playsinline id="bg-video">
-    <source src="https://your-video-link.com/video.mp4" type="video/mp4" />
+    <source src="https://res.cloudinary.com/dhhoklen5/video/upload/v1746348404/bxlbmkiadgmmfwkv3fw0.mp4" type="video/mp4" />
   </video>
+  <div id="overlay"></div>
 
   <nav>
     <a href="#about">About</a>
