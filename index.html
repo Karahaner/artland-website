@@ -1,259 +1,81 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Artland Creative; İzmir ve Bodrum'da iletişim, reklam, sosyal medya yönetimi ve yapay zeka tabanlı çözümler sunar. LLM/AI uygulamaları ile öne çıkmak için bizimle iletişime geçin." />
-  <meta name="keywords" content="İzmir reklam ajansı, Bodrum iletişim, sosyal medya yönetimi, yapay zeka, LLM, AI çözümleri, dijital reklam, brand strategy, Türkiye" />
-  <meta name="author" content="Artland Creative" />
-  <meta name="robots" content="index, follow" />
-  <meta name="language" content="Turkish" />
-  
-  <!-- Open Graph Meta Tags -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="İzmir Bodrum Reklam Ajansı | Yapay Zeka & Sosyal Medya | Artland Creative" />
-  <meta property="og:description" content="Artland Creative; İzmir ve Bodrum'da iletişim, reklam, sosyal medya yönetimi ve yapay zeka tabanlı çözümler sunar." />
-  <meta property="og:url" content="https://www.artlandtr.com" />
-  <meta property="og:image" content="https://www.artlandtr.com/logo.png" />
-  <meta property="og:site_name" content="Artland Creative" />
-  
-  <!-- Twitter Card Meta Tags -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="İzmir Bodrum Reklam Ajansı | Yapay Zeka & Sosyal Medya | Artland Creative" />
-  <meta name="twitter:description" content="Artland Creative; İzmir ve Bodrum'da iletişim, reklam, sosyal medya yönetimi ve yapay zeka tabanlı çözümler sunar." />
-  <meta name="twitter:image" content="https://www.artlandtr.com/logo.png" />
-  
-  <!-- Canonical Link -->
-  <link rel="canonical" href="https://www.artlandtr.com/" />
-  
-  <!-- JSON-LD LocalBusiness Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Artland Creative",
-    "image": "https://www.artlandtr.com/logo.png",
-    "description": "Artland Creative; İzmir ve Bodrum'da iletişim, reklam, sosyal medya yönetimi ve yapay zeka tabanlı çözümler sunar.",
-    "url": "https://www.artlandtr.com",
-    "telephone": "+90-XXX-XXX-XXXX",
-    "email": "info@artlandtr.com",
-    "areaServed": ["İzmir", "Bodrum", "Türkiye"],
-    "serviceType": ["Reklam Ajansı", "Sosyal Medya Yönetimi", "Yapay Zeka Çözümleri", "Brand Strategy", "Dijital Pazarlama"],
-    "priceRange": "$$",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "İzmir, Bodrum",
-      "addressLocality": "İzmir",
-      "addressRegion": "İzmir",
-      "postalCode": "",
-      "addressCountry": "TR"
-    },
-    "sameAs": [
-      "https://www.linkedin.com/company/artland-agency/",
-      "https://www.instagram.com/artland/",
-      "https://twitter.com/artland"
-    ]
-  }
-  </script>
-  
-  <!-- JSON-LD Organization Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Artland Creative",
-    "alternateName": "Artland",
-    "url": "https://www.artlandtr.com",
-    "logo": "https://www.artlandtr.com/logo.png",
-    "description": "İzmir ve Bodrum'da reklam, sosyal medya ve yapay zeka çözümleri sunan yaratıcı ajans",
-    "sameAs": [
-      "https://www.linkedin.com/company/artland-agency/",
-      "https://www.instagram.com/artland/",
-      "https://twitter.com/artland"
-    ],
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "contactType": "Customer Service",
-      "telephone": "+90-XXX-XXX-XXXX",
-      "email": "info@artlandtr.com"
-    }
-  }
-  </script>
-
-  <title>İzmir Bodrum Reklam Ajansı | Yapay Zeka & Sosyal Medya | Artland Creative</title>
-  
-  <style>
-    *{margin:0;padding:0;box-sizing:border-box;font-family:sans-serif}
-    html,body{width:100%;height:100%;overflow:hidden;background:transparent;color:#fff}
-    #bg-video{position:fixed;top:0;left:0;width:100vw;height:100vh;object-fit:cover;z-index:-2}
-    #overlay{position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,.25);z-index:-1}
-    nav{display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;position:absolute;top:0;width:100%;background:rgba(0,0,0,.3);z-index:2}
-
-    nav .logo {
-      flex: 0 0 auto;
-      display: flex;
-      align-items: center;
-      margin-right: 1rem;
-      z-index: 2;
-    }
-
-    nav .logo img{height:150px;max-height:150px;width:auto;display:block}
-
-    nav > div {
-      display: flex;
-      align-items: center;
-      gap: 1.6rem;
-      z-index: 3;
-      position: relative;
-    }
-
-    nav a{margin-left:1.6rem;text-decoration:none;color:#fff;font-weight:600;cursor:pointer;transition:opacity .3s}
-    nav a:hover{opacity:.7}
-
-    .modal{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:90%;max-width:960px;max-height:80%;overflow-y:auto;background:#111c;border:1px solid rgba(255,255,255,.2);border-radius:8px;padding:2rem;z-index:1000;box-shadow:0 8px 32px rgba(0,0,0,.3)}
-    .modal-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.5);z-index:999}
-    .modal.active{display:block}
-    .modal-overlay.active{display:block}
-    .modal-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.2rem}
-    .modal h2{font-size:1.9rem;font-weight:700}
-    .close{font-size:1.6rem;font-weight:700;cursor:pointer;line-height:1}
-    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;align-items:start}
-    .about-grid img{width:100%;border-radius:8px}
-    .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem}
-    .card{background:rgba(255,255,255,.05);padding:1.2rem;border-radius:6px;transition:transform .3s}
-    .card:hover{transform:translateY(-3px)}
-    .card h3{margin-bottom:.4rem;font-size:1.1rem}
-    .form-group{margin-bottom:.9rem}
-    .form-group label{display:block;margin-bottom:.35rem;font-size:.9rem;font-weight:600}
-    .form-group input,.form-group textarea{width:100%;padding:.6rem;border-radius:4px;border:1px solid #444;background:#222;color:#fff;font-size:.9rem}
-    .btn-send{background:#ff6c50;color:#fff;border:none;padding:.6rem 1.2rem;border-radius:4px;font-weight:600;cursor:pointer}
-    .btn-send:hover{opacity:.9}
-    .socials{display:flex;gap:1rem;margin-top:1.3rem}
-    .socials a svg{width:22px;height:22px;fill:#fff;opacity:.8;transition:opacity .3s}
-    .socials a:hover svg{opacity:1}
-
-    @media (max-width: 700px) {
-      nav .logo img{height:64px;max-height:64px}
-      .modal{width:95%;max-height:90%}
-      .about-grid{grid-template-columns:1fr}
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artland Creative Reklam Ajansı | Yapay Zeka & Sosyal Medya | İzmir-Bodrum</title>
+    <meta name="description" content="Artland Creative - İzmir ve Bodrum'da dijital reklam ajansı. Yapay zeka, sosyal medya yönetimi, içerik oluşturma ve SEO hizmetleri sunuyoruz.">
+    <meta name="keywords" content="dijital reklam ajansı, sosyal medya yönetimi, içerik oluşturma, yapay zeka, SEO, İzmir, Bodrum">
+    <meta name="author" content="Artland Creative">
+    <meta property="og:title" content="Artland Creative Reklam Ajansı | Yapay Zeka & Sosyal Medya | İzmir-Bodrum">
+    <meta property="og:description" content="Artland Creative - İzmir ve Bodrum'da dijital reklam ajansı. Yapay zeka, sosyal medya yönetimi, içerik oluşturma ve SEO hizmetleri sunuyoruz.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:title" content="Artland Creative Reklam Ajansı | Yapay Zeka & Sosyal Medya | İzmir-Bodrum">
+    <meta name="twitter:description" content="Artland Creative - İzmir ve Bodrum'da dijital reklam ajansı. Yapay zeka, sosyal medya yönetimi, içerik oluşturma ve SEO hizmetleri sunuyoruz.">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <video autoplay muted loop playsinline id="bg-video" poster="poster.jpg" aria-label="Artland Creative Arka Plan Videosu"><source src="https://res.cloudinary.com/dhhoklen5/video/upload/v1746358084/rmtp2txlbwx7ej3isbrk.mp4" type="video/mp4"></video>
-  <div id="overlay"></div>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Artland Creative</div>
+            <ul class="nav-menu">
+                <li><a href="#home">Anasayfa</a></li>
+                <li><a href="#about">Hakkımızda</a></li>
+                <li><a href="#services">Hizmetler</a></li>
+                <li><a href="#contact">İletişim</a></li>
+            </ul>
+        </div>
+    </nav>
 
-  <nav role="navigation" aria-label="Ana Navigasyon">
-    <a class="logo" href="#" title="Artland Creative Anasayfa"><img src="logo.png" alt="Artland Creative - İzmir Bodrum Reklam Ajansı Logosu"></a>
-    <div>
-      <a onclick="openModal('about')" role="button" tabindex="0">Hakkında</a>
-      <a onclick="openModal('services')" role="button" tabindex="0">Hizmetlerimiz</a>
-      <a onclick="openModal('contact')" role="button" tabindex="0">İletişim</a>
-    </div>
-  </nav>
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Artland Creative</h1>
+            <p>Dijital Reklam Ajansı</p>
+            <button class="cta-button">Bize Ulaşın</button>
+        </div>
+    </section>
 
-  <!-- ABOUT MODAL -->
-  <div id="about" class="modal" role="dialog" aria-modal="true" aria-labelledby="about-title">
-    <div class="modal-header"><h2 id="about-title">Biz Kimiz?</h2><span class="close" onclick="closeModal('about')" role="button" tabindex="0">&times;</span></div>
-    <div class="about-grid">
-      <div>
-        <p><strong>Artland Creative</strong> – hikayeciler, teknoloji meraklıları ve kültürel destekçilerin bir karışımı. İzmir ve Bodrum bölgelerinde <strong>reklam, sosyal medya yönetimi, iletişim stratejileri</strong> ve <strong>yapay zeka (LLM) tabanlı çözümler</strong> sunuyoruz.</p>
-        <p style="margin-top:1rem">Dikkat alanlarını hackliyoruz, duyguları bükiyoruz ve bellekte izler bırakıyoruz. Brand stratejisinden AI-destekli içerik oluşturmaya kadar, dijital dönüşümünüzün her adımında yanınızdayız.</p>
-      </div>
-      <img src="logo.png" alt="Artland Creative - İzmir ve Bodrum'da yaratıcı reklam ajansı">
-    </div>
-  </div>
+    <section id="about" class="about">
+        <div class="container">
+            <h2>Hakkımızda</h2>
+            <p>Artland Creative – hikayeciler, yaratıcılar ve teknoloji meraklılarının bir karışımı... Dikkat alanlarını hackliyor, duygulara dokunuyor ve bellekte izler bırakıyoruz. Marka stratejisinden AI-destekli SEO ve içerik oluşturmaya kadar, markaların dijital dönüşüm yolculuğunda yanında...</p>
+        </div>
+    </section>
 
-  <!-- SERVICES MODAL -->
-  <div id="services" class="modal" role="dialog" aria-modal="true" aria-labelledby="services-title">
-    <div class="modal-header"><h2 id="services-title">Hizmetlerimiz</h2><span class="close" onclick="closeModal('services')" role="button" tabindex="0">&times;</span></div>
-    <p>Strateji ve izlenme gücü buluşur. Kıvılcımları orman yangınına dönüştürüyoruz:</p>
-    <div class="cards">
-      <div class="card">
-        <h3>Brand Stratejisi</h3>
-        <p>Trendlerin ötesinde yankı uyandıran konumlandırma. İzmir ve Bodrum pazarında güçlü marka kimliği oluşturma.</p>
-      </div>
-      <div class="card">
-        <h3>Sosyal Medya Yönetimi</h3>
-        <p>İzmir, Bodrum ve Türkiye çapında sosyal medya yönetimi, içerik stratejisi ve community engagement.</p>
-      </div>
-      <div class="card">
-        <h3>Yapay Zeka & LLM Çözümleri</h3>
-        <p>LLM tabanlı içerik oluşturma, AI destekli reklam optimizasyonu ve otomatize pazarlama sistemleri.</p>
-      </div>
-      <div class="card">
-        <h3>Kampanya Geliştirme</h3>
-        <p>Baştan sona hikaye anlatıcılığı. Etkileyici, sonuç odaklı kampanyalar tasarlarız.</p>
-      </div>
-      <div class="card">
-        <h3>İçerik Üretimi</h3>
-        <p>AI ve insani yaratıcılığın birleşimi ile yüksek kaliteli, SEO optimizasyonlu içerik.</p>
-      </div>
-      <div class="card">
-        <h3>Dijital Pazarlama</h3>
-        <p>Arama motoru optimizasyonu, dijital reklam ve çok kanallı pazarlama stratejileri.</p>
-      </div>
-    </div>
-  </div>
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Hizmetler</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Sosyal Medya Yönetimi</h3>
+                    <p>Markalarınızın sosyal medya platformlarında güçlü bir varlık oluşturmak için tam stratejik ve yaratıcı hizmetler sağlıyoruz.</p>
+                </div>
+                <div class="service-card">
+                    <h3>İçerik Oluşturma</h3>
+                    <p>Hedef kitlenizle bağlantı kuran, etkili ve yaratıcı içerikler üretiyoruz. Yazılı, görsel ve video içerikte uzmanız.</p>
+                </div>
+                <div class="service-card">
+                    <h3>AI-Destekli SEO</h3>
+                    <p>Arama motorlarında daha iyi sıralanmak için yapay zeka teknolojisini kullanarak optimize edilmiş SEO stratejileri uyguluyoruz.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Dijital Stratejisi</h3>
+                    <p>Markaların dijital dönüşüm hedeflerine ulaşması için kapsamlı strateji geliştirme ve danışmanlık hizmetleri sunuyoruz.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- CONTACT MODAL -->
-  <div id="contact" class="modal" role="dialog" aria-modal="true" aria-labelledby="contact-title">
-    <div class="modal-header"><h2 id="contact-title">İletişime Geçin</h2><span class="close" onclick="closeModal('contact')" role="button" tabindex="0">&times;</span></div>
-    <p>Cesur hedefleriniz var mı? Bize <strong>info@artlandtr.com</strong> adresinden ulaşın veya aşağıdaki formu doldurun.</p>
-    <form action="https://formspree.io/f/myzwwlll" method="POST" aria-label="İletişim Formu">
-      <div class="form-group">
-        <label for="name">Ad Soyad</label>
-        <input type="text" id="name" name="name" required aria-required="true">
-      </div>
-      <div class="form-group">
-        <label for="email">E-posta Adresi</label>
-        <input type="email" id="email" name="email" required aria-required="true">
-      </div>
-      <div class="form-group">
-        <label for="message">Mesaj</label>
-        <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
-      </div>
-      <button type="submit" class="btn-send">Gönder</button>
-    </form>
-    <div class="socials">
-      <a href="https://www.linkedin.com/company/artland-agency/" target="_blank" rel="noopener noreferrer" aria-label="Artland Creative LinkedIn Sayfası" title="LinkedIn'de Bizi Takip Edin">
-        <svg viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.38-1.11 2.5-2.48 2.5A2.49 2.49 0 012.5 3.5C2.5 2.12 3.61 1 5 1s2.5 1.12 2.5 2.5zM3 8h4v13H3V8zm6.5 0h3.8v1.9h.05c.53-.8 1.85-1.65 3.8-1.65 4.07 0 4.82 2.68 4.82 6.17v7.1h-4v-6.3c0-1.5-.02-3.42-2.08-3.42-2.09 0-2.41 1.63-2.41 3.31v6.41h-4V8z"/></svg>
-      </a>
-      <a href="https://www.instagram.com/artland/" target="_blank" rel="noopener noreferrer" aria-label="Artland Creative Instagram Sayfası" title="Instagram'da Bizi Takip Edin">
-        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.266.069 1.646.069 4.85 0 3.204-.012 3.584-.07 4.85-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163C8.756 0 8.334.012 7.053.07 2.695.272.273 2.69.07 7.052.012 8.333 0 8.756 0 12s.012 3.667.07 4.947c.203 4.358 2.625 6.78 6.987 6.987 1.281.058 1.703.07 4.947.07s3.667-.012 4.947-.07c4.358-.203 6.78-2.625 6.987-6.987.058-1.28.07-1.702.07-4.947s-.012-3.667-.07-4.947c-.203-4.358-2.625-6.78-6.987-6.987-1.281-.058-1.703-.07-4.947-.07zM12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm4.965-10.322a1.44 1.44 0 110 2.881 1.44 1.44 0 010-2.881z"/></svg>
-      </a>
-      <a href="https://twitter.com/artland" target="_blank" rel="noopener noreferrer" aria-label="Artland Creative Twitter Sayfası" title="Twitter'da Bizi Takip Edin">
-        <svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2s9 5 20 5a9.5 9.5 0 00-9-5.5c4.75 2.25 7-7 7-7a10.6 10.6 0 01-9.5 5M21 3h.01"/></svg>
-      </a>
-    </div>
-  </div>
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>İletişim</h2>
+            <p>Bize ulaşın ve markanızı dijital dünyada başarıya taşıyelim!</p>
+            <a href="mailto:info@artlandcreative.com" class="cta-button">E-posta Gönder</a>
+        </div>
+    </section>
 
-  <script>
-    function openModal(id){
-      const m=document.getElementById(id);
-      if(m){
-        m.style.display='block';
-        document.body.style.overflow='hidden';
-      }
-    }
-    function closeModal(id){
-      const m=document.getElementById(id);
-      if(m){
-        m.style.display='none';
-        document.body.style.overflow='';
-      }
-    }
-    window.addEventListener('keydown',e=>{
-      if(e.key==='Escape'){
-        document.querySelectorAll('.modal').forEach(m=>m.style.display='none');
-        document.body.style.overflow='';
-      }
-    });
-    document.querySelectorAll('.modal').forEach(modal=>
-      modal.addEventListener('click',e=>{
-        if(e.target===modal)closeModal(modal.id);
-      })
-    );
-  </script>
+    <footer>
+        <p>&copy; 2024 Artland Creative. Tüm hakları saklıdır.</p>
+    </footer>
 </body>
 </html>
