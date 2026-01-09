@@ -1,81 +1,106 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artland Creative Reklam Ajansı | Yapay Zeka & Sosyal Medya | İzmir-Bodrum</title>
-    <meta name="description" content="Artland Creative - İzmir ve Bodrum'da dijital reklam ajansı. Yapay zeka, sosyal medya yönetimi, içerik oluşturma ve SEO hizmetleri sunuyoruz.">
-    <meta name="keywords" content="dijital reklam ajansı, sosyal medya yönetimi, içerik oluşturma, yapay zeka, SEO, İzmir, Bodrum">
-    <meta name="author" content="Artland Creative">
-    <meta property="og:title" content="Artland Creative Reklam Ajansı | Yapay Zeka & Sosyal Medya | İzmir-Bodrum">
-    <meta property="og:description" content="Artland Creative - İzmir ve Bodrum'da dijital reklam ajansı. Yapay zeka, sosyal medya yönetimi, içerik oluşturma ve SEO hizmetleri sunuyoruz.">
-    <meta property="og:type" content="website">
-    <meta name="twitter:title" content="Artland Creative Reklam Ajansı | Yapay Zeka & Sosyal Medya | İzmir-Bodrum">
-    <meta name="twitter:description" content="Artland Creative - İzmir ve Bodrum'da dijital reklam ajansı. Yapay zeka, sosyal medya yönetimi, içerik oluşturma ve SEO hizmetleri sunuyoruz.">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artland Creative</title>
+  <meta name="description" content="Artland blends story, technology and cultural insight to craft brand strategies, AI video, film & series design " />
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:sans-serif}
+    html,body{width:100%;height:100%;overflow:hidden;background:transparent;color:#fff}
+    #bg-video{position:fixed;top:0;left:0;width:100vw;height:100vh;object-fit:cover;z-index:-2}
+    #overlay{position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,.25);z-index:-1}
+    nav{display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;position:absolute;top:0;width:100%;background:rgba(0,0,0,.3);z-index:2} /* blur kalktı */
+
+    /* Prevent large logo from covering nav links: container + img rules and responsive fallback */
+    nav .logo {
+      flex: 0 0 auto;         /* don't let logo flex to push/overlap other items */
+      display: flex;
+      align-items: center;
+      margin-right: 1rem;
+      z-index: 2;
+    }
+
+    /* Logo büyüklüğü: 150px */
+    nav .logo img{height:150px;max-height:150px;width:auto;display:block}
+
+    /* Ensure the right-side links stay on top and are always clickable */
+    nav > div {
+      display: flex;
+      align-items: center;
+      gap: 1.6rem;
+      z-index: 3;             /* keep links above the logo */
+      position: relative;     /* make z-index effective */
+    }
+
+    nav a{margin-left:1.6rem;text-decoration:none;color:#fff;font-weight:600;cursor:pointer;transition:opacity .3s}
+    nav a:hover{opacity:.7}
+
+    /* Modal styles – cleaner flat look */
+    .modal{display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:90%;max-width:960px;max-height:80%;overflow-y:auto;background:#111c;border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:2rem 2.2rem;z-index:10}
+    .modal-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.2rem}
+    .modal h2{font-size:1.9rem;font-weight:700}
+    .close{font-size:1.6rem;font-weight:700;cursor:pointer;line-height:1}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;align-items:start}
+    .about-grid img{width:100%;border-radius:8px}
+    .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem}
+    .card{background:rgba(255,255,255,.05);padding:1.2rem;border-radius:6px;transition:transform .3s}
+    .card:hover{transform:translateY(-3px)}
+    .card h3{margin-bottom:.4rem;font-size:1.1rem}
+    .form-group{margin-bottom:.9rem}
+    .form-group label{display:block;margin-bottom:.35rem;font-size:.9rem;font-weight:600}
+    .form-group input,.form-group textarea{width:100%;padding:.6rem;border-radius:4px;border:1px solid #444;background:#222;color:#fff;font-size:.9rem}
+    .btn-send{background:#ff6c50;color:#fff;border:none;padding:.6rem 1.2rem;border-radius:4px;font-weight:600;cursor:pointer}
+    .btn-send:hover{opacity:.9}
+    .socials{display:flex;gap:1rem;margin-top:1.3rem}
+    .socials a svg{width:22px;height:22px;fill:#fff;opacity:.8;transition:opacity .3s}
+    .socials a:hover svg{opacity:1}
+
+    /* Small screens: reduce logo to avoid overlap */
+    @media (max-width: 700px) {
+      nav .logo img{height:64px;max-height:64px}
+    }
+  </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">Artland Creative</div>
-            <ul class="nav-menu">
-                <li><a href="#home">Anasayfa</a></li>
-                <li><a href="#about">Hakkımızda</a></li>
-                <li><a href="#services">Hizmetler</a></li>
-                <li><a href="#contact">İletişim</a></li>
-            </ul>
-        </div>
-    </nav>
+  <video autoplay muted loop playsinline id="bg-video" poster="poster.jpg"><source src="https://res.cloudinary.com/dhhoklen5/video/upload/v1746358084/rmtp2txlbwx7ej3isbrk.mp4" type="video/mp4"></video>
+  <div id="overlay"></div>
 
-    <section id="home" class="hero">
-        <div class="container">
-            <h1>Artland Creative</h1>
-            <p>Dijital Reklam Ajansı</p>
-            <button class="cta-button">Bize Ulaşın</button>
-        </div>
-    </section>
+  <nav>
+    <a class="logo" href="#"><img src="logo.png" alt="Artland Logo"></a>
+    <div>
+      <a onclick="openModal('about')">About</a>
+      <a onclick="openModal('services')">What We Do</a>
+      <a onclick="openModal('contact')">Contact</a>
+    </div>
+  </nav>
 
-    <section id="about" class="about">
-        <div class="container">
-            <h2>Hakkımızda</h2>
-            <p>Artland Creative – hikayeciler, yaratıcılar ve teknoloji meraklılarının bir karışımı... Dikkat alanlarını hackliyor, duygulara dokunuyor ve bellekte izler bırakıyoruz. Marka stratejisinden AI-destekli SEO ve içerik oluşturmaya kadar, markaların dijital dönüşüm yolculuğunda yanında...</p>
-        </div>
-    </section>
+  <!-- ABOUT -->
+  <div id="about" class="modal" role="dialog" aria-modal="true" tabindex="-1">
+    <div class="modal-header"><h2>Who We Are</h2><span class="close" onclick="closeModal('about')">&times;</span></div>
+    <div class="about-grid"><div><p>We’re Artland — a hybrid of storytellers, tech‑tinkerers and cultural instigators. We hack attention spans, bend emotions and leave fingerprints in memory[...]</p></div></div>
+  </div>
 
-    <section id="services" class="services">
-        <div class="container">
-            <h2>Hizmetler</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>Sosyal Medya Yönetimi</h3>
-                    <p>Markalarınızın sosyal medya platformlarında güçlü bir varlık oluşturmak için tam stratejik ve yaratıcı hizmetler sağlıyoruz.</p>
-                </div>
-                <div class="service-card">
-                    <h3>İçerik Oluşturma</h3>
-                    <p>Hedef kitlenizle bağlantı kuran, etkili ve yaratıcı içerikler üretiyoruz. Yazılı, görsel ve video içerikte uzmanız.</p>
-                </div>
-                <div class="service-card">
-                    <h3>AI-Destekli SEO</h3>
-                    <p>Arama motorlarında daha iyi sıralanmak için yapay zeka teknolojisini kullanarak optimize edilmiş SEO stratejileri uyguluyoruz.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Dijital Stratejisi</h3>
-                    <p>Markaların dijital dönüşüm hedeflerine ulaşması için kapsamlı strateji geliştirme ve danışmanlık hizmetleri sunuyoruz.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- SERVICES -->
+  <div id="services" class="modal" role="dialog" aria-modal="true" tabindex="-1">
+    <div class="modal-header"><h2>What We Do</h2><span class="close" onclick="closeModal('services')">&times;</span></div>
+    <p>Strategy meets spectacle. Here’s how we turn sparks into wildfires:</p>
+    <div class="cards"><div class="card"><h3>Brand Strategy</h3><p>Positioning that resonates beyond trends.</p></div><div class="card"><h3>Campaign Development</h3><p>End‑to‑end narratives en[...]</p></div></div>
+  </div>
 
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>İletişim</h2>
-            <p>Bize ulaşın ve markanızı dijital dünyada başarıya taşıyelim!</p>
-            <a href="mailto:info@artlandcreative.com" class="cta-button">E-posta Gönder</a>
-        </div>
-    </section>
+  <!-- CONTACT -->
+  <div id="contact" class="modal" role="dialog" aria-modal="true" tabindex="-1">
+    <div class="modal-header"><h2>Let’s Talk</h2><span class="close" onclick="closeModal('contact')">&times;</span></div>
+    <p>Got bold intentions? Reach us at <strong>info@artlandtr.com</strong>.</p>
+    <form action="https://formspree.io/f/myzwwlll" method="POST"><div class="form-group"><label>Name</label><input type="text" name="name" required></div><div class="form-group"><label>Email address</label><input type="email" name="email" required></div><div class="form-group"><label>Message</label><textarea name="message" rows="4" required></textarea></div><button class="btn-send" type="submit">Send</button></form>
+    <div class="socials"><a href="https://www.linkedin.com/company/artland-agency/" target="_blank" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.38-1.11 2.5-2.48 2.5A2.49 2.49 0 0 1 .02 3.5 2.49 2.49 0 0 1 2.5 1c1.37 0 2.48 1.12 2.48 2.5zM.5 8.98H4.96V24H.5zM8.98 8.98h4.3v2.08h.06c.6-1.13 2.06-2.32 4.24-2.32 4.54 0 5.38 2.99 5.38 6.88V24h-4.46v-7.15c0-1.71-.03-3.92-2.39-3.92-2.39 0-2.76 1.87-2.76 3.8V24h-4.37z"></path></svg></a></div>
+  </div>
 
-    <footer>
-        <p>&copy; 2024 Artland Creative. Tüm hakları saklıdır.</p>
-    </footer>
+  <script>
+    function openModal(id){const m=document.getElementById(id);if(m){m.style.display='block';document.body.style.overflow='hidden';}}
+    function closeModal(id){const m=document.getElementById(id);if(m){m.style.display='none';document.body.style.overflow='';}}
+    window.addEventListener('keydown',e=>{if(e.key==='Escape'){document.querySelectorAll('.modal').forEach(m=>m.style.display='none');document.body.style.overflow='';}});
+    document.querySelectorAll('.modal').forEach(modal=>modal.addEventListener('click',e=>{if(e.target===modal)closeModal(modal.id);}));
+  </script>
 </body>
 </html>
