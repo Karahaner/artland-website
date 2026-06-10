@@ -7,5 +7,216 @@
   <meta name="description" content="Artland Creative; AI video prodüksiyon, marka iletişim stratejisi, sosyal medya yönetimi, SEO/GEO ve yaratıcı içerik üretimi alanlarında çalışan Türkiye odaklı kreatif ajanstır.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.artlandtr.com/">
+  <meta property="og:title" content="Artland Creative | Görünürün Ötesinde">
+  <meta property="og:description" content="Kısa vadede görünür, uzun vadede hatırlanır marka iletişimi, AI video prodüksiyon ve sosyal medya stratejileri.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.artlandtr.com/">
   <style>
-    :root{--red:#ff6c50;
+    :root {
+      --bg: #0b0b10;
+      --card: rgba(255,255,255,.08);
+      --text: #fff8ef;
+      --muted: #d8cfc7;
+      --line: rgba(255,255,255,.16);
+      --accent: #ff6c50;
+      --accent2: #6b5cff;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 15% 10%, rgba(255,108,80,.28), transparent 32%),
+        radial-gradient(circle at 85% 0%, rgba(107,92,255,.26), transparent 34%),
+        linear-gradient(135deg, #09090d 0%, #14101c 52%, #08080c 100%);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.55;
+    }
+    a { color: inherit; }
+    .wrap { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(16px);
+      background: rgba(8,8,12,.72);
+      border-bottom: 1px solid var(--line);
+    }
+    nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .brand { font-weight: 900; letter-spacing: -.06em; font-size: clamp(1.4rem, 4vw, 2.2rem); text-decoration: none; }
+    .brand span { color: var(--accent); }
+    .navlinks { display: flex; gap: 18px; flex-wrap: wrap; font-size: .94rem; color: var(--muted); }
+    .navlinks a { text-decoration: none; }
+    .navlinks a:hover { color: var(--text); }
+    .hero {
+      min-height: 76vh;
+      display: grid;
+      align-items: center;
+      padding: 82px 0 72px;
+    }
+    .eyebrow {
+      display: inline-flex;
+      width: fit-content;
+      padding: 8px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      background: rgba(255,255,255,.06);
+      font-size: .88rem;
+    }
+    h1 {
+      max-width: 980px;
+      margin: 22px 0 22px;
+      font-size: clamp(3rem, 9.5vw, 8.4rem);
+      line-height: .88;
+      letter-spacing: -.09em;
+    }
+    h1 em { color: var(--accent); font-style: normal; }
+    .lead { max-width: 760px; color: var(--muted); font-size: clamp(1.05rem, 2vw, 1.35rem); }
+    .actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 34px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 20px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--text);
+      color: #101014;
+      text-decoration: none;
+      font-weight: 800;
+    }
+    .btn.secondary { background: transparent; color: var(--text); }
+    section { padding: 72px 0; border-top: 1px solid var(--line); }
+    .section-title { margin: 0 0 22px; font-size: clamp(2rem, 5vw, 4.4rem); line-height: .96; letter-spacing: -.06em; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .card {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: var(--card);
+      box-shadow: 0 20px 60px rgba(0,0,0,.18);
+    }
+    .card h3 { margin: 0 0 10px; font-size: 1.2rem; }
+    .card p { margin: 0; color: var(--muted); }
+    .split { display: grid; grid-template-columns: 1.1fr .9fr; gap: 24px; align-items: start; }
+    .kicker { color: var(--accent); font-weight: 900; text-transform: uppercase; letter-spacing: .08em; font-size: .78rem; }
+    .bigquote { font-size: clamp(1.6rem, 4vw, 3.2rem); line-height: 1.04; letter-spacing: -.05em; margin: 0; }
+    .list { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; color: var(--muted); }
+    .list li { padding: 14px 0; border-bottom: 1px solid var(--line); }
+    footer { padding: 52px 0; color: var(--muted); border-top: 1px solid var(--line); }
+    @media (max-width: 820px) {
+      .grid, .split { grid-template-columns: 1fr; }
+      nav { align-items: flex-start; flex-direction: column; padding: 18px 0; }
+      .hero { padding-top: 54px; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Artland Creative",
+    "url": "https://www.artlandtr.com/",
+    "email": "info@artlandtr.com",
+    "description": "Türkiye odaklı AI video prodüksiyon, marka iletişim stratejisi, sosyal medya yönetimi ve SEO/GEO ajansı.",
+    "areaServed": "TR"
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <nav class="wrap" aria-label="Ana menü">
+      <a class="brand" href="#top">artland<span>.</span></a>
+      <div class="navlinks">
+        <a href="#strateji">Strateji</a>
+        <a href="#hizmetler">Hizmetler</a>
+        <a href="#deneyim">Deneyim</a>
+        <a href="#iletisim">İletişim</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap">
+        <div class="eyebrow">AI video prodüksiyon · Marka iletişimi · Sosyal medya stratejisi</div>
+        <h1>Görünürün ötesinde. <em>Hafızada.</em></h1>
+        <p class="lead">Artland Creative, markalar için kısa vadede dikkat çeken ama uzun vadede hatırlanan iletişim fikirleri, AI destekli video prodüksiyonlar ve dijital marka deneyimleri tasarlar.</p>
+        <div class="actions">
+          <a class="btn" href="mailto:info@artlandtr.com">info@artlandtr.com</a>
+          <a class="btn secondary" href="#hizmetler">Neler yapıyoruz?</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="strateji">
+      <div class="wrap split">
+        <div>
+          <div class="kicker">Yaklaşım</div>
+          <h2 class="section-title">Hook dikkat çeker. Bağ hatırlatır.</h2>
+        </div>
+        <div class="card">
+          <p class="bigquote">Yankısı olmayan görünürlük sadece gürültüdür.</p>
+          <p style="margin-top:18px;color:var(--muted)">Bizim işimiz o gürültüyü marka karakterine, kültürel frekansa ve sürdürülebilir etkiye çevirmek.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="hizmetler">
+      <div class="wrap">
+        <div class="kicker">Hizmetler</div>
+        <h2 class="section-title">Ne yapıyoruz?</h2>
+        <div class="grid">
+          <article class="card"><h3>Marka İletişim Stratejisi</h3><p>Konumlandırma, mesaj mimarisi, kampanya çatısı ve marka sesi.</p></article>
+          <article class="card"><h3>AI Video Prodüksiyon</h3><p>Showreel, imaj filmi, reels, ürün videosu ve hybrid film üretimleri.</p></article>
+          <article class="card"><h3>Sosyal Medya Yönetimi</h3><p>İçerik takvimi, yaratıcı formatlar, topluluk dili ve performans optimizasyonu.</p></article>
+          <article class="card"><h3>SEO & GEO</h3><p>Google ve AI cevap motorları için teknik yapı, içerik hiyerarşisi ve görünürlük çalışmaları.</p></article>
+          <article class="card"><h3>Kreatif Yol Haritası</h3><p>Markanın kısa, orta ve uzun vadeli içerik/iletişim planı.</p></article>
+          <article class="card"><h3>Görsel Dil ve Kimlik</h3><p>Markanın dijitalde ayırt edilebilir görünmesini sağlayan estetik sistem.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="deneyim">
+      <div class="wrap split">
+        <div>
+          <div class="kicker">Deneyim</div>
+          <h2 class="section-title">Spor, kültür ve marka hikâyesi aynı masada.</h2>
+        </div>
+        <ul class="list">
+          <li>Türkiye Voleybol Milli Takımları için sosyal medya stratejisi, tema filmleri ve yaratıcı üretimler.</li>
+          <li>Ford Trucks “Uzmanına Sor” formatı için senaryo yaratımı ve proje yönetimi.</li>
+          <li>Solgar, Filenin Sultanları ve global spor iletişimi projelerinde kreatif direktörlük deneyimi.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="iletisim">
+      <div class="wrap split">
+        <div>
+          <div class="kicker">İletişim</div>
+          <h2 class="section-title">Siz hazırsanız yolculuk başlasın.</h2>
+        </div>
+        <div class="card">
+          <h3>Artland Creative</h3>
+          <p>Markanız için strateji, AI video prodüksiyon veya sosyal medya iletişim planı konuşmak için yazın.</p>
+          <p style="margin-top:18px"><a class="btn" href="mailto:info@artlandtr.com">info@artlandtr.com</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© 2026 Artland Creative · Kısa vadede görünür, uzun vadede hatırlanır.</div>
+  </footer>
+</body>
+</html>
